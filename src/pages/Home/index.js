@@ -1,13 +1,13 @@
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
-import Slider from '~/components/Layout/components/Slider';
+import HomeSlider from '~/components/Layouts/components/Slider';
 
 const cx = classNames.bind(styles);
 
 function Home() {
     return (
         <div className={cx('wrapper')}>
-            <Slider />
+            <HomeSlider />
         </div>
     );
 }

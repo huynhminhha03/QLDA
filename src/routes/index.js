@@ -1,10 +1,10 @@
 //Layout
-import { HeaderOnly } from '~/components/Layout';
-
+import { HeaderOnly } from '~/components/Layouts';
 import Home from '~/pages/Home';
 import MyCourse from '~/pages/MyCourse';
 import Post from '~/pages/Post';
 import Roadmap from '~/pages/Roadmap';
+
 
 const publicRoutes = [
     { path: '/', component: Home },
