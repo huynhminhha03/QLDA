@@ -14,6 +14,10 @@ import CreateBlog from '~/pages/CreateBlog';
 import MyCourse from '~/pages/MyCourse';
 import CreateCourse from '~/pages/CreateCourse';
 import CourseDetails from '~/pages/CourseDetails';
+import SearchResults from '~/pages/SearchResults';
+import MyCourseDetails from '~/pages/MyCourseDetails';
+import CreateLesson from '~/pages/CreateLesson';
+import MyLessonDetails from '~/pages/MyLessonDetails';
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -25,8 +29,13 @@ const publicRoutes = [
     { path: '/me/posts', component: MyBlog },
     { path: '/posts/:id/edit', component: CreateBlog },
     { path: '/roadmap', component: Roadmap },
-    { path: '/course/:slug', component: CourseDetails },
-    { path: '/my-course/:slug', component: CourseDetails },
+    { path: '/course/:course_id', component: CourseDetails },
+    { path: '/course/:course_id/edit', component: CreateCourse, layout: WithoutSidebar },
+    { path: '/course/results', component: SearchResults },
+    { path: '/my-course/:course_id', component: MyCourseDetails, layout: WithoutSidebar },
+    { path: '/my-course/:course_id/lesson', component: CreateLesson, layout: WithoutSidebar },
+    { path: '/course/:course_id/lesson/:lesson_id/edit', component: CreateLesson, layout: WithoutSidebar },
+    { path: '/my-course/:course_id/lesson/:lesson_id', component: MyLessonDetails, layout: WithoutSidebar },
     { path: '/my-course', component: MyCourse },
     { path: '/new-course', component: CreateCourse, layout: WithoutSidebar },
     { path: '/registered-course', component: RegisterCourse },
