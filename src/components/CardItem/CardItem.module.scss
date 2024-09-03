@@ -1,0 +1,119 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    background: #00000008;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 8px #0000001a;
+    }
+}
+
+.link {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+.thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+.title {
+    font-weight: 600;
+
+    a {
+        color: #292929;
+        font-size: 1.6rem;
+        line-height: 1.4;
+        overflow: hidden;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}
+
+.progress {
+    margin-top: auto;
+}
+
+.desc {
+    font-size: 1.4rem;
+    white-space: nowrap; /* Ngăn chặn xuống dòng */
+    overflow: hidden; /* Ẩn phần nội dung vượt quá */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm nếu nội dung bị cắt */
+}
+
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.old-price {
+    font-size: 1.4rem;
+    text-decoration: line-through;
+}
+
+.main-price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.more-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    align-items: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.avatar {
+    --font-size: 2rem;
+    font-size: var(--font-size);
+    background: transparent;
+    border-radius: 50%;
+
+    img {
+        width: 18px;
+        height: 18px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+

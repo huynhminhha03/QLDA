@@ -1,0 +1,22 @@
+.add-btn {
+    height: 266px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.add-icon {
+    font-size: 64px;
+    color: #333;
+    font-weight: bold;
+}
