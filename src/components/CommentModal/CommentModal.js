@@ -14,7 +14,9 @@ function CommentModal({ onClose, type, type_id, commentCount, setCommentCount })
     const [comments, setComments] = useState([]);
 
     const handleClose = useCallback(() => {
+        
         setIsClosing(true);
+
         setTimeout(() => {
             onClose();
         }, 300);
